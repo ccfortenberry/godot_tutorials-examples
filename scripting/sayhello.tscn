@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://sayhello.gd" type="Script" id=1]
+[ext_resource path="res://Delta.gd" type="Script" id=2]
+
+[node name="Panel" type="Panel"]
+margin_right = 1026.0
+margin_bottom = 596.0
+script = ExtResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 419.0
+margin_top = 217.0
+margin_right = 561.0
+margin_bottom = 231.0
+text = "I have been labelled..."
+
+[node name="Button" type="Button" parent="."]
+margin_left = 412.0
+margin_top = 258.0
+margin_right = 564.0
+margin_bottom = 312.0
+text = "Press this button!"
+
+[node name="Delta" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+script = ExtResource( 2 )
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
